@@ -18,4 +18,26 @@ public class Tablero {
     public Tablero(){ //Constructor secundario (2)
         throw new UnsupportedOperationException("Class not programing");
     }
+
+    //Métodos
+    public void dibujar(boolean mostrarBarcos){
+        throw new UnsupportedOperationException("Not programing void");
+    }
+
+    //Getters
+    public int getTotalFilas(){
+        return this.totalFilas;
+    }
+
+    public int getTotalColumnas(){
+        return this.totalColumnas;
+    }
+
+    public Flota getFlota(){
+        return this.flota;
+    }
+
+    public char getEstado(int f, int c){
+        throw new UnsupportedOperationException("Getter not programing");
+    }
 }
