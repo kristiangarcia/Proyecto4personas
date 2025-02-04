@@ -1,5 +1,7 @@
 package JueguitoBarco.Clases;
 
+import java.util.List;
+
 public class Flota {
     private List<Barco> barquitos;
 
