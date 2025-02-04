@@ -7,18 +7,22 @@ public class Tablero {
     private Flota flota;
 
     //Constructor
-    public Tablero(int f, int c){ //Constructor principal
+    public Tablero(int f, int c){ //Constructor principal (0)
         this.totalFilas = f;
         this.totalColumnas = c;
         this.flota = new Flota();
+        //Si el tablero no tiene tamaño mínimo 7x7 lanza error
+        if(this.totalFilas<7 || this.totalColumnas<7){
+            throw new IllegalArgumentException("Tamaño del tablero insuficiente (Minimo 7x7)");
+        }
     }
 
-    public Tablero(int n){ //Constructor secundario ligado al principal (1)
-        throw new UnsupportedOperationException("Class not programing");
+    public Tablero(int n){ //Constructor secundario ligado al principal (1) ligado al *0
+        this(n, n);
     }
 
-    public Tablero(){ //Constructor secundario (2)
-        throw new UnsupportedOperationException("Class not programing");
+    public Tablero(){ //Constructor secundario (2) ligado al *1
+        this(7);
     }
 
     //Métodos
