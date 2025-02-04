@@ -39,5 +39,9 @@ public class FlotaTest {
 
         f1.recibirDisparo(111,222);
         f1.recibirDisparo(111,223);
+
+        assertEquals(0,f1.getNumeroBarcosActivos());
+        assertEquals(3,f1.getNumeroBarcosHundidos());
+        assertTrue(f1.todosBarcosHundidos());
     }
 }
