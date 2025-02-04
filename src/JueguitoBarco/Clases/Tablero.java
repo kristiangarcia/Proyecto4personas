@@ -8,7 +8,9 @@ public class Tablero {
 
     //Constructor
     public Tablero(int f, int c){ //Constructor principal
-        throw new UnsupportedOperationException("Class not programing");
+        this.totalFilas = f;
+        this.totalColumnas = c;
+        this.flota = new Flota();
     }
 
     public Tablero(int n){ //Constructor secundario ligado al principal (1)
