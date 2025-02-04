@@ -26,7 +26,10 @@ public class TableroTest {
         flota.recibirDisparo(2, 2);
         assertEquals('*', flota.getBarco(2, 2).getEstado(2, 2));
 
-        flota.recibirDisparo(2, 2);
+        for(int i = 2;i<barco.getTamaño();i++){
+            flota.recibirDisparo(i, 2);
+        }
+
         assertEquals('X', flota.getBarco(2, 2).getEstado(2, 2));
 
         //Método dibujar
