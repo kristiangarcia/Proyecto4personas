@@ -8,7 +8,7 @@ public class Barco {
     private boolean[] daño;
 
     // CONSTRUCTOR
-    public Barco(int fila, int columna, int orientacion, int tamaño){
+    public Barco(int fila, int columna, boolean orientacion, int tamaño){
         throw new UnsupportedOperationException("La clase no esta programada");
     }
 
