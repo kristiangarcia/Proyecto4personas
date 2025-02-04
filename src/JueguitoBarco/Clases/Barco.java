@@ -9,16 +9,22 @@ public class Barco {
 
     // CONSTRUCTOR
     public Barco(int fila, int columna, boolean orientacion, int tamaño){
-        throw new UnsupportedOperationException("La clase no esta programada");
+        this.fila = fila;
+        this.columna = columna;
+        this.vertical = orientacion;
+
+        this.daño = new boolean[0];
+
+
     }
 
     // MÉTODOS
     public int getFila(){
-        throw new UnsupportedOperationException("La clase no esta programada");
+        return this.fila;
     }
 
     public int getColumna(){
-        throw new UnsupportedOperationException("La clase no esta programada");
+        return this.columna;
     }
 
     public int getTamaño(){
@@ -26,7 +32,7 @@ public class Barco {
     }
 
     public boolean esVertical(){
-        throw new UnsupportedOperationException("La clase no esta programada");
+        return this.vertical;
     }
 
     public boolean estaHundido(){
