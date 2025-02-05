@@ -13,9 +13,10 @@ public class Barco {
         this.columna = columna;
         this.vertical = orientacion;
 
-        this.daño = new boolean[0];
-
-
+        this.daño = new boolean[tamaño];
+        for (int i = 0; i < tamaño; i++){
+            this.daño[i] = false;
+        }
     }
 
     // MÉTODOS
@@ -28,7 +29,7 @@ public class Barco {
     }
 
     public int getTamaño(){
-        throw new UnsupportedOperationException("La clase no esta programada");
+        return this.daño.length;
     }
 
     public boolean esVertical(){
@@ -36,18 +37,58 @@ public class Barco {
     }
 
     public boolean estaHundido(){
-        throw new UnsupportedOperationException("La clase no esta programada");
+        boolean recorrerBarcos = false;
+        for (Boolean barcos : this.daño){
+            recorrerBarcos = barcos;
+        }
+        return recorrerBarcos;
     }
 
     public boolean hayBarco(int fila, int columna){
-        throw new UnsupportedOperationException("La clase no esta programada");
+        if (this.vertical) {
+            return (columna == this.columna && fila >= this.fila && fila < this.fila + daño.length);
+        } else {
+            return (fila == this.fila && columna >= this.columna && columna < this.columna + daño.length);
+        }
     }
 
     public int recibirDisparo(int fila, int columna){
-        throw new UnsupportedOperationException("La clase no esta programada");
+        int valor = 0;
+        int num = 0;
+        if (!this.hayBarco(fila, columna)){
+            valor = -1;
+        } else if (this.hayBarco(fila, columna)) {
+            for (int i = 0; i < this.daño.length; i++){
+                this.daño[i] = true;
+                valor = 1;
+                num++;
+            }
+            if (num == this.daño.length){
+                valor = 2;
+            }
+        }
+        return 2;
     }
 
     public int getEstado(int fila, int columna){
-        throw new UnsupportedOperationException("La clase no esta programada");
+        int valor = 0;
+        int num = 0;
+        if (!this.hayBarco(fila, columna)){
+            valor = -1;
+        } else if (this.hayBarco(fila, columna)) {
+            for (Boolean pos : this.daño){
+                if (!pos){
+                    valor = 0;
+                }
+                else {
+                    valor = 1;
+                    num++;
+                }
+            }
+            if(num == this.daño.length){
+                valor = 2;
+            }
+        }
+        return valor;
     }
 }
