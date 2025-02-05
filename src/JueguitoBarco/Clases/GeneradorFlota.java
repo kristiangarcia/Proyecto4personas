@@ -1,4 +1,5 @@
 package JueguitoBarco.Clases;
 
-public class Vacio {
+public class GeneradorFlota {
+
 }
