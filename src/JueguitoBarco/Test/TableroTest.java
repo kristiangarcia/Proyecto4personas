@@ -38,4 +38,15 @@ public class TableroTest {
         System.out.println("Tablero false: ");
         tablero.dibujar(false);
     }
+
+    @Test
+    public void DibujarTest(){
+        Tablero tablero = new Tablero(9, 8);
+        Flota flota = new Flota();
+        Barco barco = new Barco(1, 2, true, 3);
+        Barco barco2 = new Barco(5, 5, false, 4);
+
+        tablero.dibujar(true);
+
+    }
 }

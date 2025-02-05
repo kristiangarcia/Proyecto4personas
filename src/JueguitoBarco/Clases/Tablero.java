@@ -27,7 +27,18 @@ public class Tablero {
 
     //Métodos
     public void dibujar(boolean mostrarBarcos){
-        throw new UnsupportedOperationException("No programado aún");
+        char[][] tabla = new char[this.getTotalFilas()][this.getTotalColumnas()];
+        String dibujo = "";
+        for(int i = 0;i<this.getTotalFilas();i++){
+            for(int j= 0;j<this.getTotalColumnas();j++){
+                if(!mostrarBarcos && this.getEstado(i, j)=='B'){
+                    dibujo+='.';
+                }else{
+                    dibujo+=this.getEstado(i, j);
+                }
+            }
+        }
+        System.out.println(dibujo);
     }
 
     //Getters
