@@ -27,7 +27,7 @@ public class Tablero {
 
     //Métodos
     public void dibujar(boolean mostrarBarcos){
-        throw new UnsupportedOperationException("Not programing void");
+        throw new UnsupportedOperationException("No programado aún");
     }
 
     //Getters
@@ -44,6 +44,8 @@ public class Tablero {
     }
 
     public char getEstado(int f, int c){
-        throw new UnsupportedOperationException("Getter not programing");
+        return this.getFlota().getBarco(f, c).getEstado(f, c)== -1? '.' :
+                this.getFlota().getBarco(f, c).getEstado(f, c)== 0? 'B' :
+                this.getFlota().getBarco(f, c).getEstado(f, c)== 1? '*': 'X';
     }
 }
